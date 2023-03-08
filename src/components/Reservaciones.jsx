@@ -24,7 +24,7 @@ function Reservaciones() {
         })
         setregister(arrData)
       })
-    })
+    console.log(register)})
   }
 
   const createReg = (() =>{
