@@ -29,7 +29,8 @@ function Reservaciones() {
 
   const createReg = (() =>{
     if(form){
-    addDoc(collection(db,'reservaciones'), form)}
+    addDoc(collection(db,'reservaciones'), form)
+    alert('Reservación realizada!')}
     else{
       alert('Formulario vacío!')
     }
