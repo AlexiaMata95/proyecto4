@@ -13,7 +13,7 @@ function Reservaciones() {
   const [register, setregister] = useState([]);
   const [form, setform] = useState(null);
   
-  const getData = () =>{
+  const getData = useCallback(() => {
     let arrData=[];
     onSnapshot(collection(db,'reservaciones'), (snapshot) => {
       snapshot.docs.forEach((item) =>{
@@ -24,8 +24,8 @@ function Reservaciones() {
         })
         setregister(arrData)
       })
-    console.log(register)})
-  }
+    })
+  },[]);
 
   const createReg = (() =>{
     if(form){
